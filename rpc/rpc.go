@@ -17,6 +17,8 @@ import (
 	"github.com/sammy007/open-ethereum-pool/util"
 )
 
+const receiptStatusSuccessful = "0x1"
+
 type RPCClient struct {
 	sync.RWMutex
 	Url         string
@@ -45,8 +47,6 @@ type GetBlockReplyPart struct {
 	Number     string `json:"number"`
 	Difficulty string `json:"difficulty"`
 }
-
-const receiptStatusSuccessful = "0x1"
 
 type TxReceipt struct {
 	TxHash    string `json:"transactionHash"`
